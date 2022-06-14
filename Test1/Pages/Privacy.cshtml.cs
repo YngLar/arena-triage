@@ -21,8 +21,14 @@ namespace Test1.Pages
                 new Patient("Nils", "3", "Svein"),
                 new Patient("Arne", "2", "Svein"),
                 new Patient("Åge", "1", "Kjell"),
-                new Patient("Jonas", "4", "Svein"),
-                new Patient("Truls", "3", "Svein"),
+                new Patient("Jonas", "4", "Turid"),
+                new Patient("Truls", "3", "Turid"),
+                new Patient("Marie", "4", "Turid"),
+                new Patient("Johan", "3", "Turid"),
+                new Patient("Svein Trulsen", "2", "Turid"),
+                new Patient("Pils", "1", "Turid"),
+                new Patient("Jonas", "4", "Turid"),
+                new Patient("Kristian", "3", "Turid"),
             };
 
             PatientsWithOutDoctors = new List<Patient>
@@ -59,7 +65,6 @@ namespace Test1.Pages
 
                 PatientsWithDoctors = updatedList;
             }
-            
         }
     }
 }

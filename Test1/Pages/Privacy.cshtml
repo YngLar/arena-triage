@@ -4,6 +4,36 @@
     ViewData["Title"] = "Privacy Policy";
 }
 
+ <br />
+
+<div class="row">
+        <div class="col-md-6">
+            <h2>Triage Overview</h2>
+            <input type="button" onclick="location.href='https://localhost:7199/Privacy?Name=Svein';" value="Svein" />
+            <input type="button" onclick="location.href='https://localhost:7199/Privacy?Name=Turid';" value="Turid" />
+            <input type="button" onclick="location.href='https://localhost:7199/Privacy?Name=Kjell';" value="Kjell" />
+            <input type="button" onclick="location.href='https://localhost:7199/Privacy';" value="All" />
+        <br />
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th>Name</th>
+                    <th>Triage Level</th>
+                    <th>Assigned Doctor</th>
+                    
+                </tr>
+
+                @foreach(var item in Model.PatientsWithDoctors)
+                {   
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Triage</td>
+                        <td>@item.Doctor</td>
+                    </tr>
+                }
+            </table>
+        </div>
+ </div>
+
 <div class="row">
         <div class="col-md-6">
             <h2>Unassigned Patients</h2>
@@ -26,33 +56,13 @@
                     
                 }
             </table>
-              <button type="submit" class="btn btn-primary">Assign Doctor</button>
-          
-        </div>
+            
+        
+      
  </div>
 
- <br />
 
 
-<div class="row">
-        <div class="col-md-6">
-            <h2>Triage Overview</h2>
-            <table class="table table-striped table-bordered">
-                <tr>
-                    <th>Name</th>
-                    <th>Triage Level</th>
-                    <th>Assigned Doctor</th>
-                    
-                </tr>
+ 
 
-                @foreach(var item in Model.PatientsWithDoctors)
-                {   
-                    <tr>
-                        <td>@item.Name</td>
-                        <td>@item.Triage</td>
-                        <td>@item.Doctor</td>
-                    </tr>
-                }
-            </table>
-        </div>
- </div>
+
