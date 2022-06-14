@@ -4,6 +4,35 @@
     ViewData["Title"] = "Privacy Policy";
 }
 
+<div class="row">
+        <div class="col-md-6">
+            <h2>Unassigned Patients</h2>
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th>Name</th>
+                    <th>Triage Level</th>
+                    <th>Assigned Doctor</th>
+                    
+                </tr>
+
+                @foreach(var item in Model.PatientsWithOutDoctors)
+                {   
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Triage</td>
+                        <td>@item.Doctor</td>
+                        
+                    </tr>
+                    
+                }
+            </table>
+              <button type="submit" class="btn btn-primary">Assign Doctor</button>
+          
+        </div>
+ </div>
+
+ <br />
+
 
 <div class="row">
         <div class="col-md-6">
@@ -16,7 +45,7 @@
                     
                 </tr>
 
-                @foreach(var item in Model.Patients)
+                @foreach(var item in Model.PatientsWithDoctors)
                 {   
                     <tr>
                         <td>@item.Name</td>
