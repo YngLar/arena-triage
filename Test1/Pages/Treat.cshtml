@@ -9,10 +9,12 @@
 <div class="row">
         <div class="col-md-6">
             <h2>Triage Overview</h2>
-            <input type="button" onclick="location.href='https://localhost:7199/Privacy?Name=Svein';" value="Svein" />
-            <input type="button" onclick="location.href='https://localhost:7199/Privacy?Name=Turid';" value="Turid" />
-            <input type="button" onclick="location.href='https://localhost:7199/Privacy?Name=Kjell';" value="Kjell" />
-            <input type="button" onclick="location.href='https://localhost:7199/Privacy';" value="All" />
+            <input type="button" onclick="location.href='https://localhost:7199/Treat?Name=Svein';" value="Svein" />
+            <input type="button" onclick="location.href='https://localhost:7199/Treat?Name=Turid';" value="Turid" />
+            <input type="button" onclick="location.href='https://localhost:7199/Treat?Name=Kjell';" value="Kjell" />
+            <input type="button" onclick="location.href='https://localhost:7199/Treat';" value="All" />
+
+             
         <br />
             <table class="table table-striped table-bordered">
                 <tr>
@@ -37,6 +39,8 @@
 <div class="row">
         <div class="col-md-6">
             <h2>Unassigned Patients</h2>
+            <input type="button" onclick="location.href = 'https://localhost:7199/Treat/';" value="All Conditions" />
+            <input type="button" onclick="location.href = 'https://localhost:7199/Treat/?TriageLevel=4';" value="Critical Condition" />
             <table class="table table-striped table-bordered">
                 <tr>
                     <th>Name</th>

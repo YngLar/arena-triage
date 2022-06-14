@@ -49,7 +49,10 @@ namespace Test1.Pages
         [BindProperty(SupportsGet = true)]
         public string Name { get; set; }
 
-        
+        [BindProperty(SupportsGet = true)]
+        public string TriageLevel { get; set; }
+
+
         public void OnGet()
         {
             if(!string.IsNullOrWhiteSpace(Name))
@@ -63,7 +66,22 @@ namespace Test1.Pages
                     }
                 }
 
-                PatientsWithDoctors = updatedList;
+              
+                PatientsWithDoctors = updatedList.OrderByDescending(x => x.Triage).ToList();
+            }
+
+            if (!string.IsNullOrWhiteSpace(TriageLevel))
+            {
+                List<Patient> updatedList = new List<Patient>();
+                foreach (var item in PatientsWithOutDoctors)
+                {
+                    if (item.Triage == TriageLevel)
+                    {
+                        updatedList.Add(item);
+                    }
+                }
+
+                PatientsWithOutDoctors = updatedList;
             }
         }
     }

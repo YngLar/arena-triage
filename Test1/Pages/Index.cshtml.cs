@@ -27,7 +27,5 @@ namespace Test1.Pages
 
             Database.Save(patient);
         }
-
-
     }
 }
