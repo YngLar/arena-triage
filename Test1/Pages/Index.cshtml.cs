@@ -18,9 +18,10 @@ namespace Test1.Pages
 
         public void OnPost()
         {
-            var name = "Patrick";
-            var triageLevel = "1";
-            var doctor = "Kjell";
+           
+            var name = Request.Form["name"];
+            var triageLevel = Request.Form["triagelevel"];
+            var doctor = "";
 
             var patient = new Patient(name, triageLevel, doctor);
 
