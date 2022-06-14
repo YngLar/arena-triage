@@ -38,7 +38,11 @@ namespace Test1.Pages
                 new Patient("Svein", "4", ""),
                 new Patient("Pils", "3", ""),
                 new Patient("Roar", "2", ""),
-            
+                new Patient("Kurt", "2", ""),
+                new Patient("Nilsen", "1", ""),
+                new Patient("Jim", "4", ""),
+                new Patient("Rune", "3", ""),
+                new Patient("Kurt", "2", ""),
             };
         }
 
